@@ -16,14 +16,14 @@
 
 
     <!--CONTAINER-->
-    <div class="w-full grid lg:grid-cols-2 font-poppins px-4">
+    <div class="w-full grid lg:grid-cols-2 gap-4 font-poppins px-4 mt-10">
 
         <!--ALL COURSES-->
-        <div class="flex flex-col">
+        <div class="flex flex-col gap-4">
 
 
             <!--SINGLE COURSE UPDATED-->
-            <div class="mt-4 flex bg-gray-50 justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg course-height">
+            <div class="flex bg-gray-50 justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg course-height">
                 <!--ACCENT AND CONTENT-->
                 <div class="basis-2 grow-0 shrink-0 bg-blue-300"></div>
                 
@@ -47,7 +47,7 @@
             </div>
 
 
-            <div class="mt-4 flex bg-gray-50 justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg course-height">
+            <div class="flex bg-gray-50 justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg course-height">
                 <!--ACCENT AND CONTENT-->
                 <div class="basis-2 grow-0 shrink-0 bg-blue-300"></div>
                 
@@ -72,7 +72,7 @@
 
 
 
-            <div class="mt-4 flex bg-gray-50 justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg course-height">
+            <div class="flex bg-gray-50 justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg course-height">
                 <!--ACCENT AND CONTENT-->
                 <div class="basis-2 grow-0 shrink-0 bg-blue-300"></div>
                 
@@ -97,7 +97,7 @@
 
 
 
-            <div class="mt-4 flex bg-gray-50 justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg course-height">
+            <div class="flex bg-gray-50 justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg course-height">
                 <!--ACCENT AND CONTENT-->
                 <div class="basis-2 grow-0 shrink-0 bg-blue-300"></div>
                 
@@ -120,19 +120,36 @@
                 </div>
             </div>
 
-
-
-
-            <!--SINGLE COURSE UPDATED-->
-            
-            
-
-            
-
         </div>
 
         <!--OTHER PLACEHOLDER-->
-        <div></div>
+        <div class="grid place-content-start p-4 bg-gray-50 border-b-2 border-gray-100">
+            <div class="relative">
+                <div>
+                    <input id="search" placeholder="Course" class="appearance-none rounded-md py-1 px-2 border-2 border-gray-100" type="text"/>
+                    <i class="-ml-8 fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div id="dropdown" class="absolute px-2 dropdown bg-white border">
+                    <p class="hover:bg-blue-50">Hello</p>
+                    <p class="hover:bg-blue-50">Hello</p>
+                    <p class="hover:bg-blue-50">Hello</p>
+                    <p class="hover:bg-blue-50">Hello</p>
+                    <p class="hover:bg-blue-50">Hello</p>
+                    <p class="hover:bg-blue-50">Hello</p>
+                    <p class="hover:bg-blue-50">Hello</p>
+                    <p class="hover:bg-blue-50">Hello</p>
+                    <p class="hover:bg-blue-50">Hello</p>
+                    <p class="hover:bg-blue-50">Hello</p>
+                    <p class="hover:bg-blue-50">Hello</p>
+                    <p class="hover:bg-blue-50">Hello</p>
+                    <p class="hover:bg-blue-50">Hello</p>
+                    <p class="hover:bg-blue-50">Hello</p>
+                    <p class="hover:bg-blue-50">Hello</p>
+                    <p class="hover:bg-blue-50">Hello</p>
+                </div>
+                
+            </div>
+        </div>
     </div>
 </body>
 </html>
@@ -145,4 +162,36 @@
     .course-height {
         min-height: 110px;
     }
+
+    .dropdown {
+        display: none;
+        top: calc(100% + 0.25rem);
+        width: 328px;
+        height: 200px;
+        overflow-y: scroll;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+    }
+
+    .dropdown::-webkit-scrollbar {
+        display: none;
+    }
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .dropdown {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
 </style>
+
+<script>
+    const dropdownMenu = document.getElementById('dropdown')
+    const input = document.getElementById('search')
+
+    input.addEventListener('focus', () => {
+        dropdownMenu.style.display = 'block'
+    })
+
+    input.addEventListener('blur', () => {
+        dropdownMenu.style.display = 'none'
+    })
+</script>
