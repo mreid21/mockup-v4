@@ -11,15 +11,43 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
 </head>
-<body>
+<body class="h-screen">
 
-
-
+    <nav class="w-full h-20 bg-blue-200"></nav>
     <!--CONTAINER-->
-    <div class="w-full grid lg:grid-cols-2 gap-4 font-poppins px-4 mt-10">
+    <div class="w-full grid lg:grid-cols-2 h-3/4 gap-4 font-poppins">
 
         <!--ALL COURSES-->
-        <div class="flex flex-col gap-4">
+        <!--OTHER PLACEHOLDER-->
+        <div class="grid place-content-start p-4 bg-gray-50 border-b-2 border-gray-100">
+            <div class="relative">
+                <div>
+                    <input id="search" placeholder="Course" class="appearance-none rounded-md py-1 px-2 border-2 border-gray-100" type="text"/>
+                    <i class="-ml-8 fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div id="dropdown" class="absolute px-2 dropdown bg-white border">
+                    <p class="hover:bg-blue-50">Hello</p>
+                    <p class="hover:bg-blue-50">Hello</p>
+                    <p class="hover:bg-blue-50">Hello</p>
+                    <p class="hover:bg-blue-50">Hello</p>
+                    <p class="hover:bg-blue-50">Hello</p>
+                    <p class="hover:bg-blue-50">Hello</p>
+                    <p class="hover:bg-blue-50">Hello</p>
+                    <p class="hover:bg-blue-50">Hello</p>
+                    <p class="hover:bg-blue-50">Hello</p>
+                    <p class="hover:bg-blue-50">Hello</p>
+                    <p class="hover:bg-blue-50">Hello</p>
+                    <p class="hover:bg-blue-50">Hello</p>
+                    <p class="hover:bg-blue-50">Hello</p>
+                    <p class="hover:bg-blue-50">Hello</p>
+                    <p class="hover:bg-blue-50">Hello</p>
+                    <p class="hover:bg-blue-50">Hello</p>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="flex flex-col gap-4 overflow-y-scroll">
 
 
             <!--SINGLE COURSE UPDATED-->
@@ -247,35 +275,6 @@
             </div>
 
         </div>
-
-        <!--OTHER PLACEHOLDER-->
-        <div class="grid place-content-start p-4 bg-gray-50 border-b-2 border-gray-100">
-            <div class="relative">
-                <div>
-                    <input id="search" placeholder="Course" class="appearance-none rounded-md py-1 px-2 border-2 border-gray-100" type="text"/>
-                    <i class="-ml-8 fa-solid fa-magnifying-glass"></i>
-                </div>
-                <div id="dropdown" class="absolute px-2 dropdown bg-white border">
-                    <p class="hover:bg-blue-50">Hello</p>
-                    <p class="hover:bg-blue-50">Hello</p>
-                    <p class="hover:bg-blue-50">Hello</p>
-                    <p class="hover:bg-blue-50">Hello</p>
-                    <p class="hover:bg-blue-50">Hello</p>
-                    <p class="hover:bg-blue-50">Hello</p>
-                    <p class="hover:bg-blue-50">Hello</p>
-                    <p class="hover:bg-blue-50">Hello</p>
-                    <p class="hover:bg-blue-50">Hello</p>
-                    <p class="hover:bg-blue-50">Hello</p>
-                    <p class="hover:bg-blue-50">Hello</p>
-                    <p class="hover:bg-blue-50">Hello</p>
-                    <p class="hover:bg-blue-50">Hello</p>
-                    <p class="hover:bg-blue-50">Hello</p>
-                    <p class="hover:bg-blue-50">Hello</p>
-                    <p class="hover:bg-blue-50">Hello</p>
-                </div>
-                
-            </div>
-        </div>
     </div>
 </body>
 </html>
@@ -286,7 +285,7 @@
     }
 
     .course-height {
-        min-height: 110px;
+        min-height: 120px;
     }
 
     .h-screen-half {
