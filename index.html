@@ -16,10 +16,10 @@
 
 
     <!--CONTAINER-->
-    <div class="w-full grid lg:grid-cols-2 gap-4 font-poppins px-4 mt-10">
+    <div class="w-full grid lg:grid-cols-2 gap-4 font-poppins px-4 h-screen">
 
         <!--ALL COURSES-->
-        <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-4 overflow-y-scroll">
 
 
             <!--SINGLE COURSE UPDATED-->
@@ -27,7 +27,7 @@
                 <!--ACCENT AND CONTENT-->
                 <div class="basis-2 grow-0 shrink-0 bg-blue-300"></div>
                 
-                <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 items-center justify-between w-full px-8 py-4">
+                <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 items-center justify-between w-full px-8 py-4 overflow-hidden">
                     <p class="">COP3855</p>
                     <p class="md:col-span-2 xl:col-span-1">Jethwani</p>
                     <div class="text-sm">
@@ -286,7 +286,7 @@
     }
 
     .course-height {
-        min-height: 110px;
+        min-height: fit-content;
     }
 
     .h-screen-half {
