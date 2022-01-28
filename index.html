@@ -16,10 +16,10 @@
 
 
     <!--CONTAINER-->
-    <div class="w-full grid lg:grid-cols-2 gap-4 font-poppins px-4 h-screen">
-
+    <div class="w-full grid lg:grid-cols-12 gap-4 font-poppins px-4">
+        <div class="bg-blue-300"></div>
         <!--ALL COURSES-->
-        <div class="flex flex-col gap-4 overflow-y-scroll">
+        <div class="flex flex-col gap-4 col-span-6">
 
 
             <!--SINGLE COURSE UPDATED-->
@@ -229,7 +229,7 @@
                 
                 <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 items-center justify-between w-full px-8 py-4">
                     <p class="">COT4400</p>
-                    <p class="md:col-span-2 xl:col-span-1">Asaithambi</p>
+                    <p class="md:col-span-2 xl:col-span-1">Raymond</p>
                     <div class="text-sm">
                         <p>REMOTE</p>
                         <p>11:30PM-12:40PM</p>
@@ -249,33 +249,46 @@
         </div>
 
         <!--OTHER PLACEHOLDER-->
-        <div class="grid place-content-start p-4 bg-gray-50 border-b-2 border-gray-100">
-            <div class="relative">
-                <div>
-                    <input id="search" placeholder="Course" class="appearance-none rounded-md py-1 px-2 border-2 border-gray-100" type="text"/>
-                    <i class="-ml-8 fa-solid fa-magnifying-glass"></i>
+        <div class="grid items-start grid-rows-2 p-4 bg-gray-50 border-b-2 border-gray-100 col-span-5">
+            <section>
+                <div class="lg:flex lg:gap-4">
+                    <div class="relative lg:basis-1/2 mb-4">
+                        <input id="search" placeholder="Course" class="appearance-none rounded-md py-1 px-2 border-2 border-gray-100 w-full" type="text"/>
+                        <i class="-ml-8 fa-solid fa-magnifying-glass"></i>
+                        <div id="dropdown" class="absolute dropdown bg-white border cursor-pointer">
+                            <div class="flex justify-between gap-8 hover:bg-blue-50 px-4">
+                                <p>COP2220</p>
+                                <p class="text-gray-400 justify-self-end truncate">Programming I</p>
+                            </div>
+                            <div class="flex justify-between gap-8 hover:bg-blue-50 px-4">
+                                <p>COT3100</p>
+                                <p class="text-gray-400 truncate">Computational Structures</p>
+                            </div>
+                            <div class="flex justify-between gap-8 hover:bg-blue-50 px-4">
+                                <p>COP3855</p>
+                                <p class="text-gray-400 truncate">Web Systems Development</p>
+                            </div>
+                            <div class="flex justify-between gap-8 hover:bg-blue-50 px-4">
+                                <p>COT4440</p>
+                                <p class="text-gray-400 truncate">Design and Analysis of Algorithms</p>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="relative lg:basis-2/5 mb-4">
+                        <input id="search" placeholder="Professor" class="appearance-none rounded-md py-1 px-2 border-2 border-gray-100 w-full" type="text"/>
+                        <i class="-ml-8 fa-solid fa-graduation-cap"></i>
+                        
+                    </div>
                 </div>
-                <div id="dropdown" class="absolute px-2 dropdown bg-white border">
-                    <p class="hover:bg-blue-50">Hello</p>
-                    <p class="hover:bg-blue-50">Hello</p>
-                    <p class="hover:bg-blue-50">Hello</p>
-                    <p class="hover:bg-blue-50">Hello</p>
-                    <p class="hover:bg-blue-50">Hello</p>
-                    <p class="hover:bg-blue-50">Hello</p>
-                    <p class="hover:bg-blue-50">Hello</p>
-                    <p class="hover:bg-blue-50">Hello</p>
-                    <p class="hover:bg-blue-50">Hello</p>
-                    <p class="hover:bg-blue-50">Hello</p>
-                    <p class="hover:bg-blue-50">Hello</p>
-                    <p class="hover:bg-blue-50">Hello</p>
-                    <p class="hover:bg-blue-50">Hello</p>
-                    <p class="hover:bg-blue-50">Hello</p>
-                    <p class="hover:bg-blue-50">Hello</p>
-                    <p class="hover:bg-blue-50">Hello</p>
+                <div class="bg-blue-100 h-64">
+                    hlloe
                 </div>
-                
-            </div>
+            </section>
+            
         </div>
+        
     </div>
 </body>
 </html>
@@ -286,7 +299,13 @@
     }
 
     .course-height {
-        min-height: fit-content;
+        min-height: 7.5rem;
+    }
+
+    @media screen and (min-width: 1024px) {
+        .course-height {
+            min-height: 6rem;
+        }
     }
 
     .h-screen-half {
@@ -296,7 +315,8 @@
     .dropdown {
         display: none;
         top: calc(100% + 0.25rem);
-        width: 328px;
+        width: 100%;
+        z-index: 9999;
         height: 200px;
         overflow-y: scroll;
         border-bottom-left-radius: 0.5rem;
