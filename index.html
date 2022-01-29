@@ -11,19 +11,71 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
 </head>
-<body>
+<body class="h-screen">
 
     <!--CONTAINER-->
-    <div class="w-full grid lg:grid-cols-12 gap-4 font-poppins px-4 py-8 h-screen">
+    <div class="w-full lg:h-full grid lg:grid-cols-12 gap-4 font-poppins px-4 py-8">
 
-        
-        
+        <!--OTHER PLACEHOLDER-->
+        <div class="grid items-start p-4 bg-gray-50 border-b-2 border-gray-100 lg:col-span-4 ">
+            <section>
+                <div class="relative mb-4">
+                    <input id="search" placeholder="Course" class="appearance-none rounded-md py-1 px-2 border-2 border-gray-100 w-full" type="text"/>
+                    <i class="absolute right-3 top-2 fa-solid fa-book"></i>
+                    <div id="dropdown" class="absolute dropdown bg-white border cursor-pointer">
+                        <div class="flex justify-between gap-8 hover:bg-blue-50 px-4">
+                            <p>COP2220</p>
+                            <p class="text-gray-400 justify-self-end truncate">Programming I</p>
+                        </div>
+                        <div class="flex justify-between gap-8 hover:bg-blue-50 px-4">
+                            <p>COT3100</p>
+                            <p class="text-gray-400 truncate">Computational Structures</p>
+                        </div>
+                        <div class="flex justify-between gap-8 hover:bg-blue-50 px-4">
+                            <p>COP3855</p>
+                            <p class="text-gray-400 truncate">Web Systems Development</p>
+                        </div>
+                        <div class="flex justify-between gap-8 hover:bg-blue-50 px-4">
+                            <p>COT4440</p>
+                            <p class="text-gray-400 truncate">Design and Analysis of Algorithms</p>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                <div class="relative mb-4">
+                    <input id="search2" placeholder="Professor" class="appearance-none rounded-md py-1 px-2 border-2 border-gray-100 w-full" type="text"/>
+                    <i class="absolute right-3 top-2 fa-solid fa-graduation-cap"></i>
+                    <div id="dropdown2" class="absolute dropdown bg-white border cursor-pointer">
+                        <div class="flex justify-between gap-8 hover:bg-blue-50 px-4">
+                            <p>Dutta</p>
+                            <p class="text-gray-400 justify-self-end truncate">1 course</p>
+                        </div>
+                        <div class="flex justify-between gap-8 hover:bg-blue-50 px-4">
+                            <p>Gomez</p>
+                            <p class="text-gray-400 truncate">1 course</p>
+                        </div>
+                        <div class="flex justify-between gap-8 hover:bg-blue-50 px-4">
+                            <p>Jethwani</p>
+                            <p class="text-gray-400 truncate">3 courses</p>
+                        </div>
+                        <div class="flex justify-between gap-8 hover:bg-blue-50 px-4">
+                            <p>Redivarri</p>
+                            <p class="text-gray-400 truncate">2 courses</p>
+                        </div> 
+                    </div>
+                </div>
+            </section>
+            
+        </div>
+
+
         <!--ALL COURSES-->
-        <section class="lg:col-span-8 lg:overflow-y-scroll">
+        <section class="lg:col-span-8 grid-custom-courses">
+
+            <div class="border border-gray-500"></div>
             
-            
-            <div class="relative flex flex-col gap-4">
-                
+            <div class="relative flex flex-col gap-4 lg:overflow-y-scroll">
             
                 <!--SINGLE COURSE UPDATED-->
                 <div class="flex bg-gray-50 justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg course-height">
@@ -92,6 +144,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="flex bg-gray-50 justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg course-height">
                     <!--ACCENT AND CONTENT-->
                     <div class="basis-2 grow-0 shrink-0 bg-blue-300"></div>
@@ -114,6 +167,8 @@
                         </div>
                     </div>
                 </div>
+
+
                 <div class="flex bg-gray-50 justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg course-height">
                     <!--ACCENT AND CONTENT-->
                     <div class="basis-2 grow-0 shrink-0 bg-blue-300"></div>
@@ -136,6 +191,8 @@
                         </div>
                     </div>
                 </div>
+
+
                 <div class="flex bg-gray-50 justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg course-height">
                     <!--ACCENT AND CONTENT-->
                     <div class="basis-2 grow-0 shrink-0 bg-blue-300"></div>
@@ -158,6 +215,8 @@
                         </div>
                     </div>
                 </div>
+
+
                 <div class="flex bg-gray-50 justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg course-height">
                     <!--ACCENT AND CONTENT-->
                     <div class="basis-2 grow-0 shrink-0 bg-blue-300"></div>
@@ -180,6 +239,8 @@
                         </div>
                     </div>
                 </div>
+
+
                 <div class="flex bg-gray-50 justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg course-height">
                     <!--ACCENT AND CONTENT-->
                     <div class="basis-2 grow-0 shrink-0 bg-blue-300"></div>
@@ -202,86 +263,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex bg-gray-50 justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg course-height">
-                    <!--ACCENT AND CONTENT-->
-                    <div class="basis-2 grow-0 shrink-0 bg-blue-300"></div>
-            
-                    <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 items-center justify-between w-full px-8 py-4">
-                        <p class="">COT4400</p>
-                        <p class="md:col-span-2 xl:col-span-1">Raymond</p>
-                        <div class="text-sm">
-                            <p>REMOTE</p>
-                            <p>11:30PM-12:40PM</p>
-                        </div>
-                        <div class="md:col-span-2 xl:col-span-1">
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-blue-300 bg-blue-100 text-blue-700 rounded-full">Undergraduate</span>
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-orange-300 bg-orange-100 text-orange-700 rounded-full">Remote</span>
-                        </div>
-                    </div>
-                    <div class="basis-24 flex justify-center items-center mr-2">
-                        <div class="w-10 h-10 grid place-items-center border-2 border-gray-500 rounded-full hover:bg-blue-100">
-                            <i class="fa-regular fa-trash-can fa-lg origin-center hover:rotate-180 transition-all duration-200"></i>
-                        </div>
-                    </div>
-                </div>
+                
+                
+                
+                
+                
+                
+                
             </div>
         </section>
-
-        <!--OTHER PLACEHOLDER-->
-        <div class="grid items-start p-4 bg-gray-50 border-b-2 border-gray-100 lg:col-span-4 ">
-            <section>
-                <div class="relative mb-4">
-                    <input id="search" placeholder="Course" class="appearance-none rounded-md py-1 px-2 border-2 border-gray-100 w-full" type="text"/>
-                    <i class="absolute right-3 top-2 fa-solid fa-book"></i>
-                    <div id="dropdown" class="absolute dropdown bg-white border cursor-pointer">
-                        <div class="flex justify-between gap-8 hover:bg-blue-50 px-4">
-                            <p>COP2220</p>
-                            <p class="text-gray-400 justify-self-end truncate">Programming I</p>
-                        </div>
-                        <div class="flex justify-between gap-8 hover:bg-blue-50 px-4">
-                            <p>COT3100</p>
-                            <p class="text-gray-400 truncate">Computational Structures</p>
-                        </div>
-                        <div class="flex justify-between gap-8 hover:bg-blue-50 px-4">
-                            <p>COP3855</p>
-                            <p class="text-gray-400 truncate">Web Systems Development</p>
-                        </div>
-                        <div class="flex justify-between gap-8 hover:bg-blue-50 px-4">
-                            <p>COT4440</p>
-                            <p class="text-gray-400 truncate">Design and Analysis of Algorithms</p>
-                        </div>
-                        
-                        
-                    </div>
-                </div>
-                <div class="relative mb-4">
-                    <input id="search2" placeholder="Professor" class="appearance-none rounded-md py-1 px-2 border-2 border-gray-100 w-full" type="text"/>
-                    <i class="absolute right-3 top-2 fa-solid fa-graduation-cap"></i>
-                    <div id="dropdown2" class="absolute dropdown bg-white border cursor-pointer">
-                        <div class="flex justify-between gap-8 hover:bg-blue-50 px-4">
-                            <p>Dutta</p>
-                            <p class="text-gray-400 justify-self-end truncate">1 course</p>
-                        </div>
-                        <div class="flex justify-between gap-8 hover:bg-blue-50 px-4">
-                            <p>Gomez</p>
-                            <p class="text-gray-400 truncate">1 course</p>
-                        </div>
-                        <div class="flex justify-between gap-8 hover:bg-blue-50 px-4">
-                            <p>Jethwani</p>
-                            <p class="text-gray-400 truncate">3 courses</p>
-                        </div>
-                        <div class="flex justify-between gap-8 hover:bg-blue-50 px-4">
-                            <p>Redivarri</p>
-                            <p class="text-gray-400 truncate">2 courses</p>
-                        </div> 
-                    </div>
-                </div>
-                <div class="bg-blue-100 h-64">
-                    hlloe
-                </div>
-            </section>
-            
-        </div>
         
     </div>
 </body>
@@ -294,6 +284,12 @@
 
     .course-height {
         min-height: 7.5rem;
+    }
+
+    .grid-custom-courses {
+        display: grid;
+        align-content: space-between;
+        grid-template-rows: 10% 88%;
     }
 
     .w-custom-header {
