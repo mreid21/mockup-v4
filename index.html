@@ -82,15 +82,17 @@
                 
                 <div class="flex gap-4 justify-between">
                     
-                    <label for="main-campus">
+                    <label class="flex gap-2 justify-center items-center radio-container" for="main-campus">
                         <input type="radio" id="main-campus" name="campus">
                         <span>Main Campus</span>
                     </label>
-                    <label for="online">
+                    
+                    <label class="flex gap-2 justify-center items-center radio-container" for="online">
                         <input type="radio" id="online" name="campus">
                         <span>Online</span>
                     </label>
-                    <label for="remote">
+
+                    <label class="flex gap-2 justify-center items-center radio-container" for="remote">
                         <input type="radio" id="remote" name="campus">
                         <span>Remote</span>
                     </label>
@@ -507,6 +509,37 @@
     .course-height {
         min-height: 7.5rem;
     }
+
+    input[type="radio"] {
+        appearance: none;
+        width: 1.15em;
+        height: 1.15em;
+        border-radius: 50%;
+        border: 1px solid black;
+        display: grid;
+        place-content: center;
+        
+    }
+
+    input[type="radio"]::before {
+        content: "";
+        width: 0.65em;
+        height: 0.65em;
+        border-radius: 50%;
+        background-color: rgb(24, 105, 180);
+        transform: scale(0);
+        transition: 150ms transform ease-out;
+    }
+
+    input[type="radio"]:checked::before {
+        transform: scale(1);
+    }
+
+    input[type="radio"]:checked + .radio-container {
+        background-color: rgba(11, 145, 255, 0.1);
+    }
+
+    
 
     
 
