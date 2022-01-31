@@ -18,8 +18,8 @@
     <div class="w-full lg:h-full grid lg:grid-cols-12 gap-4 lg:p-4">
 
         <!--OTHER PLACEHOLDER-->
-        <div class="p-4 bg-white border-b-2 border-gray-100 lg:col-span-4">
-            <section>
+        <div class="p-4 bg-white border-b-2 border-gray-100 lg:col-span-5">
+            <fieldset>
                 <div class="relative mb-4">
                     <input id="search" placeholder="Course" class="appearance-none rounded-md py-1 px-2 border-2 border-gray-100 w-full" type="text"/>
                     <i class="absolute right-3 top-2 fa-solid fa-book"></i>
@@ -67,6 +67,24 @@
                     </div>
                 </div>
 
+                <div class="grid grid-cols-3 items-center text-center text-gray-500 border border-gray-300 rounded-lg overflow-hidden mb-4">
+                    
+                    <label class="inline-block border-r border-gray-300" for="main-campus">
+                        <input type="radio" id="main-campus" name="campus">
+                        <span class="block w-full">Main Campus</span>
+                    </label>
+                    
+                    <label class="inline-block" for="remote">
+                        <input type="radio" id="remote" name="campus">
+                        <span class="block w-full">Remote</span>
+                    </label>
+
+                    <label class="inline-block border-l border-gray-300" for="online">
+                        <input type="radio" id="online" name="campus">
+                        <span class="block w-full">Online</span>
+                    </label>
+                    
+                </div>
 
                 <div class="xl:flex gap-4">
                     <div class="relative mb-4 basis-1/2">
@@ -79,37 +97,141 @@
                     </div>
                 </div>
 
+                <div class="flex flex-wrap justify-center gap-2 border p-2 mb-8">
+                    <div>
+                        <input id="mwf" class="appearance-none" type="radio" name="radio" />
+                        <label class="inline-block border w-12 h-12 justify-center items-center bg-white rounded-md hover:bg-blue-50" for="mwf">
+                          <div class="grid w-full h-full place-items-center">
+                            <span class="">MWF</span>
+                          </div>
+                        </label>
+                      </div>
+                    
+                    <div>
+                      <input id="mw" class="appearance-none" type="radio" name="radio" />
+                      <label class="inline-block border w-12 h-12 justify-center items-center bg-white rounded-md hover:bg-blue-50" for="mw">
+                        <div class="grid w-full h-full place-items-center">
+                          <span class="">MW</span>
+                        </div>
+                      </label>
+                    </div>
                 
-                <div class="flex gap-4 justify-between">
-                    
-                    <label class="flex gap-2 justify-center items-center radio-container" for="main-campus">
-                        <input type="radio" id="main-campus" name="campus">
-                        <span>Main Campus</span>
-                    </label>
-                    
-                    <label class="flex gap-2 justify-center items-center radio-container" for="online">
-                        <input type="radio" id="online" name="campus">
-                        <span>Online</span>
-                    </label>
+                    <div>
+                      <input id="tr" class="appearance-none" type="radio" name="radio" />
+                      <label class="inline-block border w-12 h-12 justify-center items-center bg-white rounded-md hover:bg-blue-50" for="tr">
+                        <div class="grid w-full h-full place-items-center">
+                          <span class="">TR</span>
+                        </div>
+                      </label>
+                    </div>
+                
+                    <div>
+                      <input id="m" class="appearance-none" type="radio" name="radio" />
+                      <label class="inline-block border w-12 h-12 justify-center items-center bg-white rounded-md hover:bg-blue-50" for="m">
+                        <div class="grid w-full h-full place-items-center">
+                          <span class="">M</span>
+                        </div>
+                      </label>
+                    </div>
+                
+                    <div>
+                      <input id="t" class="appearance-none" type="radio" name="radio" />
+                      <label class="inline-block border w-12 h-12 justify-center items-center bg-white rounded-md hover:bg-blue-50" for="t">
+                        <div class="grid w-full h-full place-items-center">
+                          <span class="">T</span>
+                        </div>
+                      </label>
+                    </div>
+                
+                    <div>
+                      <input id="w" class="appearance-none" type="radio" name="radio" />
+                      <label class="inline-block border w-12 h-12 justify-center items-center bg-white rounded-md hover:bg-blue-50" for="w">
+                        <div class="grid w-full h-full place-items-center">
+                          <span class="">W</span>
+                        </div>
+                      </label>
+                    </div>
+                
+                    <div>
+                      <input id="r" class="appearance-none" type="radio" name="radio" />
+                      <label class="inline-block border w-12 h-12 justify-center items-center bg-white rounded-md hover:bg-blue-50" for="r">
+                        <div class="grid w-full h-full place-items-center">
+                          <span class="">R</span>
+                        </div>
+                      </label>
+                    </div>
+                
+                    <div>
+                      <input id="f" class="appearance-none" type="radio" name="radio" />
+                      <label class="inline-block border w-12 h-12 justify-center items-center bg-white rounded-md hover:bg-blue-50" for="f">
+                        <div class="grid w-full h-full place-items-center">
+                          <span class="">F</span>
+                        </div>
+                      </label>
+                    </div>
+                   
+                  </div>
+                  <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mb-4">
+                    <!--active status-->
+                    <div class="px-2 py-4 border border-gray-400 rounded-lg text-center text-sm text-gray-700 transition-transform duration-200 hover:bg-blue-100">
+                        <i class="fa-regular fa-clock"></i>                      
+                        <span class="inline-block">9:00AM - 10:15AM</span>
+                    </div>
+                
+                    <div class="px-2 py-4 border border-gray-400 rounded-lg text-center text-sm text-gray-700 transition-transform duration-200 hover:bg-blue-100">
+                        <i class="fa-regular fa-clock"></i>                      
+                        <span class="inline-block">10:30PM - 11:45PM</span>
+                    </div>
 
-                    <label class="flex gap-2 justify-center items-center radio-container" for="remote">
-                        <input type="radio" id="remote" name="campus">
-                        <span>Remote</span>
-                    </label>
-                </div>
-            </section>
+                    <div class="px-2 py-4 border border-gray-400 rounded-lg text-center text-sm text-gray-700 transition-transform duration-200 hover:bg-blue-100">
+                        <i class="fa-regular fa-clock"></i>                      
+                        <span class="inline-block">12:00PM - 1:15PM</span>
+                    </div>
+
+                    <div class="px-2 py-4 border border-gray-400 rounded-lg text-center text-sm text-gray-700 transition-transform duration-200 hover:bg-blue-100">
+                        <i class="fa-regular fa-clock"></i>                      
+                        <span class="inline-block">1:30PM - 2:45PM</span>
+                    </div>
+
+                    <div class="px-2 py-4 border border-gray-400 rounded-lg text-center text-sm text-gray-700 transition-transform duration-200 hover:bg-blue-100">
+                        <i class="fa-regular fa-clock"></i>                      
+                        <span class="inline-block">3:00PM - 4:15PM</span>
+                    </div>
+
+                    <div class="px-2 py-4 border border-gray-400 rounded-lg text-center text-sm text-gray-700 transition-transform duration-200 hover:bg-blue-100">
+                        <i class="fa-regular fa-clock"></i>                      
+                        <span class="inline-block">4:30PM - 5:45PM</span>
+                    </div>
+
+                    <div class="px-2 py-4 border border-gray-400 rounded-lg text-center text-sm text-gray-700 transition-transform duration-200 hover:bg-blue-100">
+                        <i class="fa-regular fa-clock"></i>                      
+                        <span class="inline-block">6:00PM - 7:15PM</span>
+                    </div>
+
+                    <div class="px-2 py-4 border border-gray-400 rounded-lg text-center text-sm text-gray-700 transition-transform duration-200 hover:bg-blue-100">
+                        <i class="fa-regular fa-clock"></i>                      
+                        <span class="inline-block">7:30PM - 8:45PM</span>
+                    </div>
+
+                    <div class="px-2 py-4 border border-gray-400 rounded-lg text-center text-sm text-gray-700 transition-transform duration-200 hover:bg-blue-100">
+                        <i class="fa-regular fa-clock"></i>                      
+                        <span class="inline-block">9:00PM - 10:15PM</span>
+                    </div>
+                  </div>
+                
+            </fieldset>
             
         </div>
 
 
         <!--ALL COURSES-->
-        <section class="lg:col-span-8 grid-custom-courses overflow-hidden">
+        <section class="lg:col-span-7 grid-custom-courses overflow-hidden">
 
             <div class=" bg-white border-2">
                 <p class="text-lg text-center">Filtration System / Label</p>
             </div>
             
-            <div class="relative lg:overflow-y-scroll">
+            <div class="relative overflow-y-scroll">
             
                 <!--SINGLE COURSE UPDATED-->
                 <div class="flex bg-white justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg course-height">
@@ -509,35 +631,28 @@
     .course-height {
         min-height: 7.5rem;
     }
-
     input[type="radio"] {
-        appearance: none;
-        width: 1.15em;
-        height: 1.15em;
-        border-radius: 50%;
-        border: 1px solid black;
-        display: grid;
-        place-content: center;
-        
+        display: none;
+        position: absolute;
+        visibility: hidden;
+    }
+    input[type="radio"]:checked + span {
+        background-color: rgba(106, 194, 245, 0.61);
+        color: white;
     }
 
-    input[type="radio"]::before {
-        content: "";
-        width: 0.65em;
-        height: 0.65em;
-        border-radius: 50%;
-        background-color: rgb(24, 105, 180);
-        transform: scale(0);
-        transition: 150ms transform ease-out;
+    input[type="radio"]:checked + label {
+        background-color: rgba(106, 194, 245, 0.61);
+        color: rgb(55, 139, 187);
     }
 
-    input[type="radio"]:checked::before {
-        transform: scale(1);
-    }
+    
 
-    input[type="radio"]:checked + .radio-container {
-        background-color: rgba(11, 145, 255, 0.1);
-    }
+    
+
+   .min-h-8 {
+       min-height: 2.5rem;
+   }
 
     
 
