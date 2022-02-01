@@ -68,20 +68,26 @@
                 </div>
 
                 <div class="grid grid-cols-3 items-center text-center text-gray-500 border border-gray-300 rounded-lg overflow-hidden mb-4">
-                    
+                    <!--FIX TAG NAMES-->
                     <label class="inline-block border-r border-gray-300" for="main-campus">
-                        <input type="radio" id="main-campus" name="campus">
-                        <span class="block w-full">Main Campus</span>
+                        <input class="absolute appearance-none visibility-hidden hidden" type="radio" id="main-campus" name="campus">
+                        <span class="block w-full h-10 grid place-items-center">
+                            <span>Main Campus</span>
+                        </span>
                     </label>
                     
                     <label class="inline-block" for="remote">
-                        <input type="radio" id="remote" name="campus">
-                        <span class="block w-full">Remote</span>
+                        <input class="absolute appearance-none visibility-hidden hidden" type="radio" id="remote" name="campus">
+                        <span class="block w-full h-10 grid place-items-center">
+                            <span>Remote</span>
+                        </span>
                     </label>
 
                     <label class="inline-block border-l border-gray-300" for="online">
-                        <input type="radio" id="online" name="campus">
-                        <span class="block w-full">Online</span>
+                        <input class="absolute appearance-none visibility-hidden hidden" type="radio" id="online" name="campus">
+                        <span class="block w-full h-10 grid place-items-center">
+                            <span>Online</span>
+                        </span>
                     </label>
                     
                 </div>
@@ -220,6 +226,11 @@
                   </div>
                 
             </fieldset>
+
+            <div class="md:grid md:grid-cols-2">
+                <button class="inline-block py-2 px-4 mx-1 my-1.5 font-bold cursor-pointer border uppercase rounded-md text-sm transition-all duration-200 text-blue-500 bg-white hover:bg-blue-500 hover:text-white border border-blue-500">Confirm</button>
+                <button class="inline-block py-2 px-4 mx-1 my-1.5 font-bold cursor-pointer border uppercase rounded-md text-sm transition-all duration-200 text-red-500 bg-white hover:bg-red-500 hover:text-white border border-red-500">Clear</button>
+            </div>
             
         </div>
 
@@ -234,10 +245,10 @@
             <div class="relative overflow-y-scroll">
             
                 <!--SINGLE COURSE UPDATED-->
-                <div class="flex bg-white justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg course-height">
+                <div class="flex bg-white justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg min-height">
                     <!--ACCENT AND CONTENT-->
                     <div class="basis-2 grow-0 shrink-0 bg-blue-300"></div>
-            
+                    
                     <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 items-center justify-between w-full px-8 py-4 overflow-hidden">
                         <p class="">COP3855</p>
                         <p class="md:col-span-2 xl:col-span-1">Jethwani</p>
@@ -251,25 +262,26 @@
                         </div>
                     </div>
                     <div class="basis-24 flex justify-center items-center mr-2">
-                        <div class="w-10 h-10 grid place-items-center border-2 border-gray-500 rounded-full transition-all duration-200 hover:rotate-180 hover:bg-blue-100">
-                            <i class="fa-regular fa-trash-can fa-lg origin-center "></i>
+                        <div class="w-10 h-10 grid place-items-center border-2 border-gray-500 rounded-full hover:bg-blue-100">
+                            <i class="fa-regular fa-trash-can fa-lg origin-center hover:rotate-180 transition-all duration-200"></i>
                         </div>
                     </div>
                 </div>
-                <div class="flex bg-white justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg course-height">
+
+                <div class="flex bg-white justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg min-height">
                     <!--ACCENT AND CONTENT-->
                     <div class="basis-2 grow-0 shrink-0 bg-blue-300"></div>
-            
-                    <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 items-center justify-between w-full px-8 py-4">
-                        <p class="">CIS4922</p>
-                        <p class="md:col-span-2 xl:col-span-1">Umapathy</p>
+                    
+                    <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 items-center justify-between w-full px-8 py-4 overflow-hidden">
+                        <p class="">COP3855</p>
+                        <p class="md:col-span-2 xl:col-span-1">Jethwani</p>
                         <div class="text-sm">
-                            <p>Building 15 Room 1205</p>
+                            <p>REMOTE</p>
                             <p>1:30PM-3:40PM</p>
                         </div>
                         <div class="md:col-span-2 xl:col-span-1">
                             <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-blue-300 bg-blue-100 text-blue-700 rounded-full">Undergraduate</span>
-            
+                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-orange-300 bg-orange-100 text-orange-700 rounded-full">Remote</span>
                         </div>
                     </div>
                     <div class="basis-24 flex justify-center items-center mr-2">
@@ -278,20 +290,21 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex bg-white justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg course-height">
+
+                <div class="flex bg-white justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg min-height">
                     <!--ACCENT AND CONTENT-->
                     <div class="basis-2 grow-0 shrink-0 bg-blue-300"></div>
-            
-                    <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 items-center justify-between w-full px-8 py-4">
-                        <p class="">COP6930</p>
-                        <p class="md:col-span-2 xl:col-span-1">Dutta</p>
+                    
+                    <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 items-center justify-between w-full px-8 py-4 overflow-hidden">
+                        <p class="">COP3855</p>
+                        <p class="md:col-span-2 xl:col-span-1">Jethwani</p>
                         <div class="text-sm">
-                            <p>ONLINE</p>
+                            <p>REMOTE</p>
                             <p>1:30PM-3:40PM</p>
                         </div>
                         <div class="md:col-span-2 xl:col-span-1">
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-purple-300 bg-purple-100 text-purple-700 rounded-full">Graduate</span>
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-green-300 bg-green-100 text-green-700 rounded-full">Online</span>
+                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-blue-300 bg-blue-100 text-blue-700 rounded-full">Undergraduate</span>
+                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-orange-300 bg-orange-100 text-orange-700 rounded-full">Remote</span>
                         </div>
                     </div>
                     <div class="basis-24 flex justify-center items-center mr-2">
@@ -301,20 +314,20 @@
                     </div>
                 </div>
 
-                <div class="flex bg-white justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg course-height">
+                <div class="flex bg-white justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg min-height">
                     <!--ACCENT AND CONTENT-->
                     <div class="basis-2 grow-0 shrink-0 bg-blue-300"></div>
-            
-                    <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 items-center justify-between w-full px-8 py-4">
-                        <p class="">COP6930</p>
-                        <p class="md:col-span-2 xl:col-span-1">Dutta</p>
+                    
+                    <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 items-center justify-between w-full px-8 py-4 overflow-hidden">
+                        <p class="">COP3855</p>
+                        <p class="md:col-span-2 xl:col-span-1">Jethwani</p>
                         <div class="text-sm">
-                            <p>ONLINE</p>
+                            <p>REMOTE</p>
                             <p>1:30PM-3:40PM</p>
                         </div>
                         <div class="md:col-span-2 xl:col-span-1">
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-purple-300 bg-purple-100 text-purple-700 rounded-full">Graduate</span>
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-green-300 bg-green-100 text-green-700 rounded-full">Online</span>
+                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-blue-300 bg-blue-100 text-blue-700 rounded-full">Undergraduate</span>
+                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-orange-300 bg-orange-100 text-orange-700 rounded-full">Remote</span>
                         </div>
                     </div>
                     <div class="basis-24 flex justify-center items-center mr-2">
@@ -324,21 +337,20 @@
                     </div>
                 </div>
 
-
-                <div class="flex bg-white justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg course-height">
+                <div class="flex bg-white justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg min-height">
                     <!--ACCENT AND CONTENT-->
                     <div class="basis-2 grow-0 shrink-0 bg-blue-300"></div>
-            
-                    <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 items-center justify-between w-full px-8 py-4">
-                        <p class="">COP6930</p>
-                        <p class="md:col-span-2 xl:col-span-1">Dutta</p>
+                    
+                    <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 items-center justify-between w-full px-8 py-4 overflow-hidden">
+                        <p class="">COP3855</p>
+                        <p class="md:col-span-2 xl:col-span-1">Jethwani</p>
                         <div class="text-sm">
-                            <p>ONLINE</p>
+                            <p>REMOTE</p>
                             <p>1:30PM-3:40PM</p>
                         </div>
                         <div class="md:col-span-2 xl:col-span-1">
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-purple-300 bg-purple-100 text-purple-700 rounded-full">Graduate</span>
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-green-300 bg-green-100 text-green-700 rounded-full">Online</span>
+                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-blue-300 bg-blue-100 text-blue-700 rounded-full">Undergraduate</span>
+                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-orange-300 bg-orange-100 text-orange-700 rounded-full">Remote</span>
                         </div>
                     </div>
                     <div class="basis-24 flex justify-center items-center mr-2">
@@ -348,21 +360,20 @@
                     </div>
                 </div>
 
-
-                <div class="flex bg-white justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg course-height">
+                <div class="flex bg-white justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg min-height">
                     <!--ACCENT AND CONTENT-->
                     <div class="basis-2 grow-0 shrink-0 bg-blue-300"></div>
-            
-                    <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 items-center justify-between w-full px-8 py-4">
-                        <p class="">COP6930</p>
-                        <p class="md:col-span-2 xl:col-span-1">Dutta</p>
+                    
+                    <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 items-center justify-between w-full px-8 py-4 overflow-hidden">
+                        <p class="">COP3855</p>
+                        <p class="md:col-span-2 xl:col-span-1">Jethwani</p>
                         <div class="text-sm">
-                            <p>ONLINE</p>
+                            <p>REMOTE</p>
                             <p>1:30PM-3:40PM</p>
                         </div>
                         <div class="md:col-span-2 xl:col-span-1">
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-purple-300 bg-purple-100 text-purple-700 rounded-full">Graduate</span>
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-green-300 bg-green-100 text-green-700 rounded-full">Online</span>
+                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-blue-300 bg-blue-100 text-blue-700 rounded-full">Undergraduate</span>
+                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-orange-300 bg-orange-100 text-orange-700 rounded-full">Remote</span>
                         </div>
                     </div>
                     <div class="basis-24 flex justify-center items-center mr-2">
@@ -372,21 +383,20 @@
                     </div>
                 </div>
 
-
-                <div class="flex bg-white justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg course-height">
+                <div class="flex bg-white justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg min-height">
                     <!--ACCENT AND CONTENT-->
                     <div class="basis-2 grow-0 shrink-0 bg-blue-300"></div>
-            
-                    <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 items-center justify-between w-full px-8 py-4">
-                        <p class="">COP6930</p>
-                        <p class="md:col-span-2 xl:col-span-1">Dutta</p>
+                    
+                    <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 items-center justify-between w-full px-8 py-4 overflow-hidden">
+                        <p class="">COP3855</p>
+                        <p class="md:col-span-2 xl:col-span-1">Jethwani</p>
                         <div class="text-sm">
-                            <p>ONLINE</p>
+                            <p>REMOTE</p>
                             <p>1:30PM-3:40PM</p>
                         </div>
                         <div class="md:col-span-2 xl:col-span-1">
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-purple-300 bg-purple-100 text-purple-700 rounded-full">Graduate</span>
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-green-300 bg-green-100 text-green-700 rounded-full">Online</span>
+                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-blue-300 bg-blue-100 text-blue-700 rounded-full">Undergraduate</span>
+                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-orange-300 bg-orange-100 text-orange-700 rounded-full">Remote</span>
                         </div>
                     </div>
                     <div class="basis-24 flex justify-center items-center mr-2">
@@ -396,21 +406,20 @@
                     </div>
                 </div>
 
-
-                <div class="flex bg-white justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg course-height">
+                <div class="flex bg-white justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg min-height">
                     <!--ACCENT AND CONTENT-->
                     <div class="basis-2 grow-0 shrink-0 bg-blue-300"></div>
-            
-                    <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 items-center justify-between w-full px-8 py-4">
-                        <p class="">COP6930</p>
-                        <p class="md:col-span-2 xl:col-span-1">Dutta</p>
+                    
+                    <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 items-center justify-between w-full px-8 py-4 overflow-hidden">
+                        <p class="">COP3855</p>
+                        <p class="md:col-span-2 xl:col-span-1">Jethwani</p>
                         <div class="text-sm">
-                            <p>ONLINE</p>
+                            <p>REMOTE</p>
                             <p>1:30PM-3:40PM</p>
                         </div>
                         <div class="md:col-span-2 xl:col-span-1">
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-purple-300 bg-purple-100 text-purple-700 rounded-full">Graduate</span>
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-green-300 bg-green-100 text-green-700 rounded-full">Online</span>
+                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-blue-300 bg-blue-100 text-blue-700 rounded-full">Undergraduate</span>
+                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-orange-300 bg-orange-100 text-orange-700 rounded-full">Remote</span>
                         </div>
                     </div>
                     <div class="basis-24 flex justify-center items-center mr-2">
@@ -420,21 +429,20 @@
                     </div>
                 </div>
 
-
-                <div class="flex bg-white justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg course-height">
+                <div class="flex bg-white justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg min-height">
                     <!--ACCENT AND CONTENT-->
                     <div class="basis-2 grow-0 shrink-0 bg-blue-300"></div>
-            
-                    <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 items-center justify-between w-full px-8 py-4">
-                        <p class="">COP6930</p>
-                        <p class="md:col-span-2 xl:col-span-1">Dutta</p>
+                    
+                    <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 items-center justify-between w-full px-8 py-4 overflow-hidden">
+                        <p class="">COP3855</p>
+                        <p class="md:col-span-2 xl:col-span-1">Jethwani</p>
                         <div class="text-sm">
-                            <p>ONLINE</p>
+                            <p>REMOTE</p>
                             <p>1:30PM-3:40PM</p>
                         </div>
                         <div class="md:col-span-2 xl:col-span-1">
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-purple-300 bg-purple-100 text-purple-700 rounded-full">Graduate</span>
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-green-300 bg-green-100 text-green-700 rounded-full">Online</span>
+                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-blue-300 bg-blue-100 text-blue-700 rounded-full">Undergraduate</span>
+                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-orange-300 bg-orange-100 text-orange-700 rounded-full">Remote</span>
                         </div>
                     </div>
                     <div class="basis-24 flex justify-center items-center mr-2">
@@ -444,22 +452,20 @@
                     </div>
                 </div>
 
-
-
-                <div class="flex bg-white justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg course-height">
+                <div class="flex bg-white justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg min-height">
                     <!--ACCENT AND CONTENT-->
                     <div class="basis-2 grow-0 shrink-0 bg-blue-300"></div>
-            
-                    <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 items-center justify-between w-full px-8 py-4">
-                        <p class="">COP6930</p>
-                        <p class="md:col-span-2 xl:col-span-1">Dutta</p>
+                    
+                    <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 items-center justify-between w-full px-8 py-4 overflow-hidden">
+                        <p class="">COP3855</p>
+                        <p class="md:col-span-2 xl:col-span-1">Jethwani</p>
                         <div class="text-sm">
-                            <p>ONLINE</p>
+                            <p>REMOTE</p>
                             <p>1:30PM-3:40PM</p>
                         </div>
                         <div class="md:col-span-2 xl:col-span-1">
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-purple-300 bg-purple-100 text-purple-700 rounded-full">Graduate</span>
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-green-300 bg-green-100 text-green-700 rounded-full">Online</span>
+                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-blue-300 bg-blue-100 text-blue-700 rounded-full">Undergraduate</span>
+                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-orange-300 bg-orange-100 text-orange-700 rounded-full">Remote</span>
                         </div>
                     </div>
                     <div class="basis-24 flex justify-center items-center mr-2">
@@ -469,22 +475,20 @@
                     </div>
                 </div>
 
-
-
-                <div class="flex bg-white justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg course-height">
+                <div class="flex bg-white justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg min-height">
                     <!--ACCENT AND CONTENT-->
                     <div class="basis-2 grow-0 shrink-0 bg-blue-300"></div>
-            
-                    <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 items-center justify-between w-full px-8 py-4">
-                        <p class="">COP6930</p>
-                        <p class="md:col-span-2 xl:col-span-1">Dutta</p>
+                    
+                    <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 items-center justify-between w-full px-8 py-4 overflow-hidden">
+                        <p class="">COP3855</p>
+                        <p class="md:col-span-2 xl:col-span-1">Jethwani</p>
                         <div class="text-sm">
-                            <p>ONLINE</p>
+                            <p>REMOTE</p>
                             <p>1:30PM-3:40PM</p>
                         </div>
                         <div class="md:col-span-2 xl:col-span-1">
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-purple-300 bg-purple-100 text-purple-700 rounded-full">Graduate</span>
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-green-300 bg-green-100 text-green-700 rounded-full">Online</span>
+                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-blue-300 bg-blue-100 text-blue-700 rounded-full">Undergraduate</span>
+                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-orange-300 bg-orange-100 text-orange-700 rounded-full">Remote</span>
                         </div>
                     </div>
                     <div class="basis-24 flex justify-center items-center mr-2">
@@ -495,125 +499,8 @@
                 </div>
 
 
-
-                <div class="flex bg-white justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg course-height">
-                    <!--ACCENT AND CONTENT-->
-                    <div class="basis-2 grow-0 shrink-0 bg-blue-300"></div>
-            
-                    <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 items-center justify-between w-full px-8 py-4">
-                        <p class="">COP6930</p>
-                        <p class="md:col-span-2 xl:col-span-1">Dutta</p>
-                        <div class="text-sm">
-                            <p>ONLINE</p>
-                            <p>1:30PM-3:40PM</p>
-                        </div>
-                        <div class="md:col-span-2 xl:col-span-1">
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-purple-300 bg-purple-100 text-purple-700 rounded-full">Graduate</span>
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-green-300 bg-green-100 text-green-700 rounded-full">Online</span>
-                        </div>
-                    </div>
-                    <div class="basis-24 flex justify-center items-center mr-2">
-                        <div class="w-10 h-10 grid place-items-center border-2 border-gray-500 rounded-full hover:bg-blue-100">
-                            <i class="fa-regular fa-trash-can fa-lg origin-center hover:rotate-180 transition-all duration-200"></i>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="flex bg-white justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg course-height">
-                    <!--ACCENT AND CONTENT-->
-                    <div class="basis-2 grow-0 shrink-0 bg-blue-300"></div>
-            
-                    <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 items-center justify-between w-full px-8 py-4">
-                        <p class="">COP6930</p>
-                        <p class="md:col-span-2 xl:col-span-1">Dutta</p>
-                        <div class="text-sm">
-                            <p>ONLINE</p>
-                            <p>1:30PM-3:40PM</p>
-                        </div>
-                        <div class="md:col-span-2 xl:col-span-1">
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-purple-300 bg-purple-100 text-purple-700 rounded-full">Graduate</span>
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-green-300 bg-green-100 text-green-700 rounded-full">Online</span>
-                        </div>
-                    </div>
-                    <div class="basis-24 flex justify-center items-center mr-2">
-                        <div class="w-10 h-10 grid place-items-center border-2 border-gray-500 rounded-full hover:bg-blue-100">
-                            <i class="fa-regular fa-trash-can fa-lg origin-center hover:rotate-180 transition-all duration-200"></i>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="flex bg-white justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg course-height">
-                    <!--ACCENT AND CONTENT-->
-                    <div class="basis-2 grow-0 shrink-0 bg-blue-300"></div>
-            
-                    <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 items-center justify-between w-full px-8 py-4">
-                        <p class="">COP6930</p>
-                        <p class="md:col-span-2 xl:col-span-1">Dutta</p>
-                        <div class="text-sm">
-                            <p>ONLINE</p>
-                            <p>1:30PM-3:40PM</p>
-                        </div>
-                        <div class="md:col-span-2 xl:col-span-1">
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-purple-300 bg-purple-100 text-purple-700 rounded-full">Graduate</span>
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-green-300 bg-green-100 text-green-700 rounded-full">Online</span>
-                        </div>
-                    </div>
-                    <div class="basis-24 flex justify-center items-center mr-2">
-                        <div class="w-10 h-10 grid place-items-center border-2 border-gray-500 rounded-full hover:bg-blue-100">
-                            <i class="fa-regular fa-trash-can fa-lg origin-center hover:rotate-180 transition-all duration-200"></i>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="flex bg-white justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg course-height">
-                    <!--ACCENT AND CONTENT-->
-                    <div class="basis-2 grow-0 shrink-0 bg-blue-300"></div>
-            
-                    <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 items-center justify-between w-full px-8 py-4">
-                        <p class="">COP6930</p>
-                        <p class="md:col-span-2 xl:col-span-1">Dutta</p>
-                        <div class="text-sm">
-                            <p>ONLINE</p>
-                            <p>1:30PM-3:40PM</p>
-                        </div>
-                        <div class="md:col-span-2 xl:col-span-1">
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-purple-300 bg-purple-100 text-purple-700 rounded-full">Graduate</span>
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-green-300 bg-green-100 text-green-700 rounded-full">Online</span>
-                        </div>
-                    </div>
-                    <div class="basis-24 flex justify-center items-center mr-2">
-                        <div class="w-10 h-10 grid place-items-center border-2 border-gray-500 rounded-full hover:bg-blue-100">
-                            <i class="fa-regular fa-trash-can fa-lg origin-center hover:rotate-180 transition-all duration-200"></i>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="flex bg-white justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg course-height">
-                    <!--ACCENT AND CONTENT-->
-                    <div class="basis-2 grow-0 shrink-0 bg-blue-300"></div>
-            
-                    <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 items-center justify-between w-full px-8 py-4">
-                        <p class="">COP6930</p>
-                        <p class="md:col-span-2 xl:col-span-1">Dutta</p>
-                        <div class="text-sm">
-                            <p>ONLINE</p>
-                            <p>1:30PM-3:40PM</p>
-                        </div>
-                        <div class="md:col-span-2 xl:col-span-1">
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-purple-300 bg-purple-100 text-purple-700 rounded-full">Graduate</span>
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-green-300 bg-green-100 text-green-700 rounded-full">Online</span>
-                        </div>
-                    </div>
-                    <div class="basis-24 flex justify-center items-center mr-2">
-                        <div class="w-10 h-10 grid place-items-center border-2 border-gray-500 rounded-full hover:bg-blue-100">
-                            <i class="fa-regular fa-trash-can fa-lg origin-center hover:rotate-180 transition-all duration-200"></i>
-                        </div>
-                    </div>
-                </div>
+                
+                
                 
             </div>
 
@@ -627,15 +514,10 @@
     body {
         font-family: 'Noto Sans', sans-serif;
     }
-
     .course-height {
         min-height: 7.5rem;
     }
-    input[type="radio"] {
-        display: none;
-        position: absolute;
-        visibility: hidden;
-    }
+   
     input[type="radio"]:checked + span {
         background-color: rgba(106, 194, 245, 0.61);
         color: white;
@@ -646,28 +528,12 @@
         color: rgb(55, 139, 187);
     }
 
-    
 
-    
-
-   .min-h-8 {
-       min-height: 2.5rem;
-   }
-
-    
-
-    
-
-    .w-custom-header {
-        width: calc(100% - 1.8rem);
-    }
     @media screen and (min-width: 1024px) {
         .course-height {
             min-height: 6rem;
         }
-        .w-custom-header {
-        width: calc(66.666667% - 1.8rem);
-        }
+      
 
 
         .grid-custom-courses {
@@ -695,6 +561,7 @@
         display: none;
     }
     /* Hide scrollbar for IE, Edge and Firefox */
+    /* this will be deleted in final build and replaced with no scroll*/
     .dropdown {
         -ms-overflow-style: none;  /* IE and Edge */
         scrollbar-width: none;  /* Firefox */
