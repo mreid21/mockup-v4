@@ -13,12 +13,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
 </head>
-<body class="h-screen bg-gray-50">
+<body class="lg:h-screen bg-gray-50">
     <!--CONTAINER-->
     <div class="w-full lg:h-full grid lg:grid-cols-12 gap-4 lg:p-4">
 
         <!--OTHER PLACEHOLDER-->
-        <div class="p-4 bg-white border-b-2 border-gray-100 lg:col-span-5">
+        <div class=" p-4 bg-white border-b-2 border-gray-100 lg:col-span-5">
             <fieldset>
                 <div class="relative mb-4">
                     <input id="search" placeholder="Course" class="appearance-none rounded-md py-1 px-2 border-2 border-gray-100 w-full" type="text"/>
@@ -228,8 +228,8 @@
             </fieldset>
 
             <div class="md:grid md:grid-cols-2">
-                <button class="inline-block py-2 px-4 mx-1 my-1.5 font-bold cursor-pointer border uppercase rounded-md text-sm transition-all duration-200 text-blue-500 bg-white hover:bg-blue-500 hover:text-white border border-blue-500">Confirm</button>
-                <button class="inline-block py-2 px-4 mx-1 my-1.5 font-bold cursor-pointer border uppercase rounded-md text-sm transition-all duration-200 text-red-500 bg-white hover:bg-red-500 hover:text-white border border-red-500">Clear</button>
+                <button class="inline-block py-2 px-4 mx-1 my-1.5 font-bold cursor-pointer border uppercase rounded-md text-sm transition-all duration-200 text-blue-500 bg-blue-100 hover:bg-blue-500 hover:text-white border border-blue-500">Confirm</button>
+                <button class="inline-block py-2 px-4 mx-1 my-1.5 font-bold cursor-pointer border uppercase rounded-md text-sm transition-all duration-200 text-red-500 bg-red-100 hover:bg-red-500 hover:text-white border border-red-500">Clear</button>
             </div>
             
         </div>
@@ -238,244 +238,24 @@
         <!--ALL COURSES-->
         <section class="lg:col-span-7 grid-custom-courses overflow-hidden">
 
-            <div class=" bg-white border-2">
-                <p class="text-lg text-center">Filtration System / Label</p>
+            <div class="hidden lg:block bg-white border-b pr-24 pl-8">
+                <div class="grid grid-cols-4 w-full h-full items-center ">
+                    <p>Course Code</p>
+                    <div class="flex gap-2 items-center">
+                        <span>Professor</span>
+                    </div>
+                    <div class="flex gap-2 items-center">
+                        <span>Time</span>
+                        <i class="fas fa-arrow-up"></i>
+                    </div>
+                    <p>Tags</p>
+                </div>
             </div>
             
-            <div class="relative overflow-y-scroll">
+            <div class="relative overflow-y-auto">
             
                 <!--SINGLE COURSE UPDATED-->
-                <div class="flex bg-white justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg min-height">
-                    <!--ACCENT AND CONTENT-->
-                    <div class="basis-2 grow-0 shrink-0 bg-blue-300"></div>
-                    
-                    <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 items-center justify-between w-full px-8 py-4 overflow-hidden">
-                        <p class="">COP3855</p>
-                        <p class="md:col-span-2 xl:col-span-1">Jethwani</p>
-                        <div class="text-sm">
-                            <p>REMOTE</p>
-                            <p>1:30PM-3:40PM</p>
-                        </div>
-                        <div class="md:col-span-2 xl:col-span-1">
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-blue-300 bg-blue-100 text-blue-700 rounded-full">Undergraduate</span>
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-orange-300 bg-orange-100 text-orange-700 rounded-full">Remote</span>
-                        </div>
-                    </div>
-                    <div class="basis-24 flex justify-center items-center mr-2">
-                        <div class="w-10 h-10 grid place-items-center border-2 border-gray-500 rounded-full hover:bg-blue-100">
-                            <i class="fa-regular fa-trash-can fa-lg origin-center hover:rotate-180 transition-all duration-200"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex bg-white justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg min-height">
-                    <!--ACCENT AND CONTENT-->
-                    <div class="basis-2 grow-0 shrink-0 bg-blue-300"></div>
-                    
-                    <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 items-center justify-between w-full px-8 py-4 overflow-hidden">
-                        <p class="">COP3855</p>
-                        <p class="md:col-span-2 xl:col-span-1">Jethwani</p>
-                        <div class="text-sm">
-                            <p>REMOTE</p>
-                            <p>1:30PM-3:40PM</p>
-                        </div>
-                        <div class="md:col-span-2 xl:col-span-1">
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-blue-300 bg-blue-100 text-blue-700 rounded-full">Undergraduate</span>
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-orange-300 bg-orange-100 text-orange-700 rounded-full">Remote</span>
-                        </div>
-                    </div>
-                    <div class="basis-24 flex justify-center items-center mr-2">
-                        <div class="w-10 h-10 grid place-items-center border-2 border-gray-500 rounded-full hover:bg-blue-100">
-                            <i class="fa-regular fa-trash-can fa-lg origin-center hover:rotate-180 transition-all duration-200"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex bg-white justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg min-height">
-                    <!--ACCENT AND CONTENT-->
-                    <div class="basis-2 grow-0 shrink-0 bg-blue-300"></div>
-                    
-                    <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 items-center justify-between w-full px-8 py-4 overflow-hidden">
-                        <p class="">COP3855</p>
-                        <p class="md:col-span-2 xl:col-span-1">Jethwani</p>
-                        <div class="text-sm">
-                            <p>REMOTE</p>
-                            <p>1:30PM-3:40PM</p>
-                        </div>
-                        <div class="md:col-span-2 xl:col-span-1">
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-blue-300 bg-blue-100 text-blue-700 rounded-full">Undergraduate</span>
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-orange-300 bg-orange-100 text-orange-700 rounded-full">Remote</span>
-                        </div>
-                    </div>
-                    <div class="basis-24 flex justify-center items-center mr-2">
-                        <div class="w-10 h-10 grid place-items-center border-2 border-gray-500 rounded-full hover:bg-blue-100">
-                            <i class="fa-regular fa-trash-can fa-lg origin-center hover:rotate-180 transition-all duration-200"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex bg-white justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg min-height">
-                    <!--ACCENT AND CONTENT-->
-                    <div class="basis-2 grow-0 shrink-0 bg-blue-300"></div>
-                    
-                    <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 items-center justify-between w-full px-8 py-4 overflow-hidden">
-                        <p class="">COP3855</p>
-                        <p class="md:col-span-2 xl:col-span-1">Jethwani</p>
-                        <div class="text-sm">
-                            <p>REMOTE</p>
-                            <p>1:30PM-3:40PM</p>
-                        </div>
-                        <div class="md:col-span-2 xl:col-span-1">
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-blue-300 bg-blue-100 text-blue-700 rounded-full">Undergraduate</span>
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-orange-300 bg-orange-100 text-orange-700 rounded-full">Remote</span>
-                        </div>
-                    </div>
-                    <div class="basis-24 flex justify-center items-center mr-2">
-                        <div class="w-10 h-10 grid place-items-center border-2 border-gray-500 rounded-full hover:bg-blue-100">
-                            <i class="fa-regular fa-trash-can fa-lg origin-center hover:rotate-180 transition-all duration-200"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex bg-white justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg min-height">
-                    <!--ACCENT AND CONTENT-->
-                    <div class="basis-2 grow-0 shrink-0 bg-blue-300"></div>
-                    
-                    <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 items-center justify-between w-full px-8 py-4 overflow-hidden">
-                        <p class="">COP3855</p>
-                        <p class="md:col-span-2 xl:col-span-1">Jethwani</p>
-                        <div class="text-sm">
-                            <p>REMOTE</p>
-                            <p>1:30PM-3:40PM</p>
-                        </div>
-                        <div class="md:col-span-2 xl:col-span-1">
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-blue-300 bg-blue-100 text-blue-700 rounded-full">Undergraduate</span>
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-orange-300 bg-orange-100 text-orange-700 rounded-full">Remote</span>
-                        </div>
-                    </div>
-                    <div class="basis-24 flex justify-center items-center mr-2">
-                        <div class="w-10 h-10 grid place-items-center border-2 border-gray-500 rounded-full hover:bg-blue-100">
-                            <i class="fa-regular fa-trash-can fa-lg origin-center hover:rotate-180 transition-all duration-200"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex bg-white justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg min-height">
-                    <!--ACCENT AND CONTENT-->
-                    <div class="basis-2 grow-0 shrink-0 bg-blue-300"></div>
-                    
-                    <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 items-center justify-between w-full px-8 py-4 overflow-hidden">
-                        <p class="">COP3855</p>
-                        <p class="md:col-span-2 xl:col-span-1">Jethwani</p>
-                        <div class="text-sm">
-                            <p>REMOTE</p>
-                            <p>1:30PM-3:40PM</p>
-                        </div>
-                        <div class="md:col-span-2 xl:col-span-1">
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-blue-300 bg-blue-100 text-blue-700 rounded-full">Undergraduate</span>
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-orange-300 bg-orange-100 text-orange-700 rounded-full">Remote</span>
-                        </div>
-                    </div>
-                    <div class="basis-24 flex justify-center items-center mr-2">
-                        <div class="w-10 h-10 grid place-items-center border-2 border-gray-500 rounded-full hover:bg-blue-100">
-                            <i class="fa-regular fa-trash-can fa-lg origin-center hover:rotate-180 transition-all duration-200"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex bg-white justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg min-height">
-                    <!--ACCENT AND CONTENT-->
-                    <div class="basis-2 grow-0 shrink-0 bg-blue-300"></div>
-                    
-                    <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 items-center justify-between w-full px-8 py-4 overflow-hidden">
-                        <p class="">COP3855</p>
-                        <p class="md:col-span-2 xl:col-span-1">Jethwani</p>
-                        <div class="text-sm">
-                            <p>REMOTE</p>
-                            <p>1:30PM-3:40PM</p>
-                        </div>
-                        <div class="md:col-span-2 xl:col-span-1">
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-blue-300 bg-blue-100 text-blue-700 rounded-full">Undergraduate</span>
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-orange-300 bg-orange-100 text-orange-700 rounded-full">Remote</span>
-                        </div>
-                    </div>
-                    <div class="basis-24 flex justify-center items-center mr-2">
-                        <div class="w-10 h-10 grid place-items-center border-2 border-gray-500 rounded-full hover:bg-blue-100">
-                            <i class="fa-regular fa-trash-can fa-lg origin-center hover:rotate-180 transition-all duration-200"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex bg-white justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg min-height">
-                    <!--ACCENT AND CONTENT-->
-                    <div class="basis-2 grow-0 shrink-0 bg-blue-300"></div>
-                    
-                    <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 items-center justify-between w-full px-8 py-4 overflow-hidden">
-                        <p class="">COP3855</p>
-                        <p class="md:col-span-2 xl:col-span-1">Jethwani</p>
-                        <div class="text-sm">
-                            <p>REMOTE</p>
-                            <p>1:30PM-3:40PM</p>
-                        </div>
-                        <div class="md:col-span-2 xl:col-span-1">
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-blue-300 bg-blue-100 text-blue-700 rounded-full">Undergraduate</span>
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-orange-300 bg-orange-100 text-orange-700 rounded-full">Remote</span>
-                        </div>
-                    </div>
-                    <div class="basis-24 flex justify-center items-center mr-2">
-                        <div class="w-10 h-10 grid place-items-center border-2 border-gray-500 rounded-full hover:bg-blue-100">
-                            <i class="fa-regular fa-trash-can fa-lg origin-center hover:rotate-180 transition-all duration-200"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex bg-white justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg min-height">
-                    <!--ACCENT AND CONTENT-->
-                    <div class="basis-2 grow-0 shrink-0 bg-blue-300"></div>
-                    
-                    <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 items-center justify-between w-full px-8 py-4 overflow-hidden">
-                        <p class="">COP3855</p>
-                        <p class="md:col-span-2 xl:col-span-1">Jethwani</p>
-                        <div class="text-sm">
-                            <p>REMOTE</p>
-                            <p>1:30PM-3:40PM</p>
-                        </div>
-                        <div class="md:col-span-2 xl:col-span-1">
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-blue-300 bg-blue-100 text-blue-700 rounded-full">Undergraduate</span>
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-orange-300 bg-orange-100 text-orange-700 rounded-full">Remote</span>
-                        </div>
-                    </div>
-                    <div class="basis-24 flex justify-center items-center mr-2">
-                        <div class="w-10 h-10 grid place-items-center border-2 border-gray-500 rounded-full hover:bg-blue-100">
-                            <i class="fa-regular fa-trash-can fa-lg origin-center hover:rotate-180 transition-all duration-200"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex bg-white justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg min-height">
-                    <!--ACCENT AND CONTENT-->
-                    <div class="basis-2 grow-0 shrink-0 bg-blue-300"></div>
-                    
-                    <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 items-center justify-between w-full px-8 py-4 overflow-hidden">
-                        <p class="">COP3855</p>
-                        <p class="md:col-span-2 xl:col-span-1">Jethwani</p>
-                        <div class="text-sm">
-                            <p>REMOTE</p>
-                            <p>1:30PM-3:40PM</p>
-                        </div>
-                        <div class="md:col-span-2 xl:col-span-1">
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-blue-300 bg-blue-100 text-blue-700 rounded-full">Undergraduate</span>
-                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-orange-300 bg-orange-100 text-orange-700 rounded-full">Remote</span>
-                        </div>
-                    </div>
-                    <div class="basis-24 flex justify-center items-center mr-2">
-                        <div class="w-10 h-10 grid place-items-center border-2 border-gray-500 rounded-full hover:bg-blue-100">
-                            <i class="fa-regular fa-trash-can fa-lg origin-center hover:rotate-180 transition-all duration-200"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex bg-white justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg min-height">
+                <div class="flex bg-white justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg min-height-course">
                     <!--ACCENT AND CONTENT-->
                     <div class="basis-2 grow-0 shrink-0 bg-blue-300"></div>
                     
@@ -499,11 +279,37 @@
                 </div>
 
 
-                
-                
+                <div class="flex bg-white justify-between rounded-sm shadow-sm border-b border-gray-100 text-lg min-height-course">
+                    <!--ACCENT AND CONTENT-->
+                    <div class="basis-2 grow-0 shrink-0 bg-blue-300"></div>
+                    
+                    <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 items-center justify-between w-full px-8 py-4 overflow-hidden">
+                        <p class="">COT3100</p>
+                        <p class="md:col-span-2 xl:col-span-1">Getahun</p>
+                        <div class="text-sm">
+                            <p>ONLINE</p>
+                            <p>1:30PM-3:40PM</p>
+                        </div>
+                        <div class="md:col-span-2 xl:col-span-1">
+                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-blue-300 bg-blue-100 text-blue-700 rounded-full">Undergraduate</span>
+                            <span class="px-2 py-0.5 m-1 text-sm inline-block border-2 border-green-300 bg-green-100 text-green-700 rounded-full">Online</span>
+                        </div>
+                    </div>
+                    <div class="basis-24 flex justify-center items-center mr-2">
+                        <div class="w-10 h-10 grid place-items-center border-2 border-gray-500 rounded-full hover:bg-blue-100">
+                            <i class="fa-regular fa-trash-can fa-lg origin-center hover:rotate-180 transition-all duration-200"></i>
+                        </div>
+                    </div>
+                </div>
                 
             </div>
 
+            <div class="flex bg-white items-center p-4">
+                <button class="inline-block py-2 px-4 mx-1 my-1.5 font-bold cursor-pointer border uppercase rounded-md text-sm transition-all duration-200 text-blue-500 bg-blue-100 hover:bg-blue-500 hover:text-white border border-blue-500">
+                    Export To csv
+                    <span class="ml-1"><i class="far fa-file-excel"></i></span>
+                </button>
+            </div>
         </section>
         
     </div>
@@ -514,7 +320,7 @@
     body {
         font-family: 'Noto Sans', sans-serif;
     }
-    .course-height {
+    .min-height-course {
         min-height: 7.5rem;
     }
    
@@ -530,8 +336,8 @@
 
 
     @media screen and (min-width: 1024px) {
-        .course-height {
-            min-height: 6rem;
+        .min-height-course {
+            min-height: 5rem;
         }
       
 
@@ -539,7 +345,7 @@
         .grid-custom-courses {
             display: grid;
             align-content: space-between;
-            grid-template-rows: 15% 83%;
+            grid-template-rows: 8% 83% 8%;
             grid-template-columns: minmax(0, 1fr);
         }
     }
